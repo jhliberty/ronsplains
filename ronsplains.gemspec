@@ -2,17 +2,15 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'ronsplains/version'
-
 Gem::Specification.new do |spec|
-  spec.name          = "ronsplains"
-  spec.version       = Ronsplains::VERSION
+  spec.name          = "ronsplaining"
+  spec.version       = "0.0.1"
   spec.authors       = ["Xuan Yue"]
   spec.email         = ["mintedfreshly@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{"gem demo for Ron's class"}
+  spec.description   = %q{"gem demo for Ron's class"}
+  spec.homepage      = "http://www.rubygems.org"
   spec.license       = "MIT"
-
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
@@ -20,4 +18,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_runtime_dependency "sinatra"
 end
